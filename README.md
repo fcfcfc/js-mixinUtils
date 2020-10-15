@@ -53,18 +53,18 @@
 - [写在最后](#写在最后)  
 ## 安装  
 ```sh
-$ npm install --save js-utils-common
+$ npm install --save js-mixin-utils
 ```  
 ## 使用  
 #### 在Vue项目中使用
 ```sh
-import Main from 'js-utils-common';
+import Main from 'js-mixin-utils';
 Main.functionName();
 ```  
 #### 以JS文件方式引用
 ```sh
 <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<script src="unpkg.com/js-utils-common/lib/index.js"></script>
+<script src="unpkg.com/js-mixin-utils/lib/index.js"></script>
 window.myJsUtils.functionName()
 ```  
 ## 常用的sass的mixins

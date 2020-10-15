@@ -1,0 +1,10 @@
+import arrayFn from "./arrayFn";
+import timeFn from "./date";
+import checkFn from "./checkFn";
+import plugsFn from "./plugsFn";
+import numberFn from "./numberFn";
+import stringFn from "./stringFn";
+import windowFn from "./windowFn";
+const utils = Object.assign(arrayFn, timeFn, checkFn, plugsFn, numberFn, stringFn, windowFn);
+window.myJsUtils = utils;
+export default utils;

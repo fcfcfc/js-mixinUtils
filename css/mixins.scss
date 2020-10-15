@@ -1,0 +1,176 @@
+@mixin absolute_center{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto !important;
+}
+
+@mixin setWebkit($property, $value) {
+  #{$property}: $value;
+  -webkit-#{$property}:#{$value};
+  -moz-#{$property}:#{$value};
+  -o-#{$property}:#{$value};
+  -ms-#{$property}:#{$value};
+}
+
+@mixin ub-img($type: 0) {
+  @if ($type == 1) {
+    @include setWebkit(background-size, cover);
+    background: {
+      repeat: no-repeat;
+      position: center;
+    };
+  } @else if($type == 2) {
+    @include setWebkit(background-size, auto 100%);
+    background: {
+      repeat: repeat-x;
+    };
+  } @else if($type == 3) {
+    @include setWebkit(background-size, 100% auto);
+    background: {
+      repeat: repeat-y;
+    };
+  } @else if($type == 4) {
+    @include setWebkit(background-size, 100% auto);
+    background: {
+      repeat: no-repeat;
+      position: center;
+    };
+  } @else if($type == 5) {
+    @include setWebkit(background-size, auto 100%);
+    background: {
+      repeat: no-repeat;
+      position: center;
+    };
+  } @else if($type == 6) {
+    background: {
+      repeat: no-repeat;
+      position: center;
+    };
+  } @else if($type == 7) {
+    @include setWebkit(background-size, 100% 100%);
+    background: {
+      repeat: no-repeat;
+      position-y: center;
+    };
+  } @else if($type == 8) {
+    @include setWebkit(background-size, contain);
+    background: {
+      repeat: no-repeat;
+      position: left;
+    };
+  } @else {
+    @include setWebkit(background-size, contain);
+    background: {
+      repeat: no-repeat;
+      position: center;
+    };
+  }
+}
+
+@mixin triangle($direction: top, $borderWidth: 6px, $borderColor: #ccc) {
+  position:absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  line-height: 0;
+  overflow: hidden;
+  @if $direction == bottom {
+    border-top: $borderWidth solid $borderColor;
+    border-left: $borderWidth solid transparent;
+    border-right: $borderWidth solid transparent;
+  }
+  @else if $direction == left {
+    border-right: $borderWidth solid $borderColor;
+    border-top: $borderWidth solid transparent;
+    border-bottom: $borderWidth solid transparent;
+  }
+  @else if $direction == top {
+    border-bottom: $borderWidth solid $borderColor;
+    border-left: $borderWidth solid transparent;
+    border-right: $borderWidth solid transparent;
+  }
+  @else if $direction == right {
+    border-left: $borderWidth solid $borderColor;
+    border-top: $borderWidth solid transparent;
+    border-bottom: $borderWidth solid transparent;
+  }
+}
+
+@mixin ellipsisByLineNumber($lines: 1) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break:break-all;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+}
+
+@mixin myBorder($type: all, $color: #000, $width: 1px, $style: solid) {
+  @if($type == all) {
+    border: {
+      width: $width;
+      style: $style;
+      color: $color;
+    };
+  } @else if($type == none) {
+    border: none;
+  } @else {
+    border: {
+      #{$type}-width: $width;
+      #{$type}-style: $style;
+      color: $color;
+    };
+  }
+}
+
+@mixin textBlink() {
+  @include setWebkit(animation, blink 1s linear infinite);
+  @keyframes blink{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+  @-webkit-keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @-moz-keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @-ms-keyframes blink {
+    0% {opacity: 1; }
+    100% { opacity: 0;}
+  }
+  @-o-keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}
+
+@mixin badgeStyle($bgc: #ff0000, $size: 16px, $fontSize: 10px, $color: #FFFFFF) {
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  background-color: $bgc;
+  & > span {
+    line-height: 1;
+    font-size: $fontSize;
+    -webkit-transform: scale(0.8);
+    -o-transform: scale(1);
+    display: inline-block;
+    color: $color;
+  }
+}
+
+@mixin maskDom($zIndex: 999, $bgc: rgba(#000000, 0.3)) {
+  position: fixed;
+  z-index: $zIndex;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $bgc;
+}

@@ -83,7 +83,7 @@ chainWebpack: config => {
             .loader('sass-resources-loader')
             .options({
                 resources: [
-                    './node_modules/js-utils-common/css/mixins.scss'
+                    './node_modules/js-mixin-utils/css/mixins.scss'
                 ]
             })
             .end()

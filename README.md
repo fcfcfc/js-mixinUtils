@@ -102,6 +102,7 @@ myBorder | 设置border | border类型(all，none，top，bottom，left，right)
 textBlink | 文字带渐变效果的闪烁 | - | - | - | - |            
 badgeStyle | 角标标记 | 背景颜色，默认#ff0000 | 大小，默认16px | 字体大小，默认10px | 字体颜色，默认#FFFFFF |
 maskDom | 遮罩 | dom的z-index，默认999 | 背景颜色，默认rgba(#000000, 0.3) | - | - |
+initStyle | 初始化标签样式 | - | - | - | - |  
 ## 方法  
 ### 数组相关方法  
 #### ***sliceArrByNum(arr, num)***  

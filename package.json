@@ -1,6 +1,6 @@
 {
   "name": "js-mixin-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "常用的js方法和sass的mixin",
   "private": false,
   "main": "lib/main.js",

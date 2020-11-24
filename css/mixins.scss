@@ -101,7 +101,12 @@
 
 @mixin ellipsisByLineNumber($lines: 1) {
   text-overflow: ellipsis;
-  display: -webkit-box;
+  @if $lines == 1 {
+    display: inline-block;
+  }
+  @else {
+    display: -webkit-box;
+  }
   word-break:break-all;
   overflow: hidden;
   -webkit-box-orient: vertical;

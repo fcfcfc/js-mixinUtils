@@ -1,9 +1,8 @@
 import Sortable from 'sortablejs'
-import {Loading, MessageBox, Message, Notification} from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import {ElLoading, ElMessageBox, ElMessage, ElNotification} from 'element-plus';
 export default {
     elementUIAlert(msg = '', callback = () => {}, tip = '提示') {
-        MessageBox.alert(msg, tip, {
+        ElMessageBox.alert(msg, tip, {
             confirmButtonText: '确定',
             type: 'warning',
             lockScroll: false
@@ -14,7 +13,7 @@ export default {
         });
     },
     elementUIConfirm(msg = '', callback = () => {}, cancelFn = () => {}, confirmButtonText = '确定', cancelButtonText = '取消') {
-        MessageBox.confirm(msg, '提示', {
+        ElMessageBox.confirm(msg, '提示', {
             confirmButtonText: confirmButtonText,
             cancelButtonText: cancelButtonText,
             type: 'warning'
@@ -25,7 +24,7 @@ export default {
         });
     },
     elementUIToast(msg = '') {
-        Notification({
+        ElNotification({
             title: '成功',
             message: msg,
             type: 'success',
@@ -33,7 +32,7 @@ export default {
         });
     },
     elementUIPrompt(title, inputValue = '', callback = () => {}, cancelCallback = () => {}, placeholder = '') {
-        MessageBox.prompt(title, '提示', {
+        ElMessageBox.prompt(title, '提示', {
             confirmButtonText: '确定',
             cancelButtonText: '取消',
             inputValue: inputValue,
@@ -49,7 +48,7 @@ export default {
         });
     },
     elementUIMessage(msg = '', offset = 20, type = 'success', duration = 3000) {
-        return Message({
+        return ElMessage({
             message: msg,
             type: type,
             offset: offset,
@@ -57,7 +56,7 @@ export default {
         });
     },
     elementUIShowLoadingFn() {
-        return Loading.service({
+        return ElLoading.service({
             lock: true,
             text: '努力加载中...',
             spinner: 'el-icon-loading',

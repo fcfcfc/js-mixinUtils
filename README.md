@@ -51,6 +51,8 @@
      - [initMySortable初始化拖拽插件sortablejs](#initmysortableclassname-endfn-startfn)
      - [vueRouterOpenNewWindow将vue-router中的path在新窗口打开](#vuerouteropennewwindowthat-pagepath)                                     
 - [写在最后](#写在最后)  
+## 注意
+#### 1.0.5之后的版本中，vue升级到了vue3.x，如果依赖vue的方法有问题，请使用1.0.5版本
 ## 安装  
 ```sh
 $ npm install --save js-mixin-utils

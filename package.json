@@ -1,6 +1,6 @@
 {
   "name": "js-mixin-utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "常用的js方法和sass的mixin",
   "private": false,
   "main": "lib/main.js",
@@ -16,7 +16,9 @@
   "keywords": [
     "utils",
     "js",
-    "sass mixin"
+    "sass mixin",
+    "element-ui",
+    "vue"
   ],
   "author": "fcfcfc",
   "license": "ISC",
@@ -25,9 +27,9 @@
   },
   "homepage": "https://github.com/fcfcfc/js-mixinUtils#readme",
   "dependencies": {
-    "element-ui": "^2.13.2",
+    "element-plus": "^1.0.2-beta.39",
     "sortablejs": "^1.10.2",
-    "vue": "^2.6.12"
+    "vue": "^3.0.11"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -36,6 +38,7 @@
     "@babel/preset-env": "^7.11.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.13.3",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^1.0.0",
     "file-loader": "^6.0.0",

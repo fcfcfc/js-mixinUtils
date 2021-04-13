@@ -1,6 +1,6 @@
 {
   "name": "js-mixin-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "常用的js方法和sass的mixin",
   "private": false,
   "main": "lib/main.js",
@@ -38,7 +38,6 @@
     "@babel/preset-env": "^7.11.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^7.1.5",
-    "babel-plugin-import": "^1.13.3",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^1.0.0",
     "file-loader": "^6.0.0",

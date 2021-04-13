@@ -65,7 +65,7 @@ Main.functionName();
 ```  
 #### 以JS文件方式引用
 ```sh
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<link rel="stylesheet" href="https://unpkg.com/element-plus/lib/theme-chalk/index.css">
 <script src="unpkg.com/js-mixin-utils/lib/index.js"></script>
 window.myJsUtils.functionName()
 ```  
